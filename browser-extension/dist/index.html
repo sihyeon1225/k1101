@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body class="container">
-    <img src="plants-people.png" alt="plants and people" />
+  <img src="plants-people.png" alt="plants and people" />
   <div>
     <h1>Welcome to Your Personal Carbon Trigger!</h1>
   </div>
@@ -18,9 +18,18 @@
     <div>
       <h2>New? Add your Information</h2>
     </div>
+    <!-- 세 개의 지역 입력란 -->
     <div>
-      <label for="region">Region Name</label>
-      <input type="text" id="region" required class="region-name" />
+      <label for="region1">Region Name 1</label>
+      <input type="text" id="region1" required class="region-name" />
+    </div>
+    <div>
+      <label for="region2">Region Name 2</label>
+      <input type="text" id="region2" required class="region-name" />
+    </div>
+    <div>
+      <label for="region3">Region Name 3</label>
+      <input type="text" id="region3" required class="region-name" />
     </div>
     <div>
       <label for="api">Your API Key from tmrow</label>
@@ -28,19 +37,20 @@
     </div>
     <button class="search-btn">Submit</button>
   </form>
+
   <!-- Result area -->
   <div class="result">
     <div class="loading">loading...</div>
     <div class="errors"></div>
-    <div class="data"></div>
-    <div class="result-container">
-      <p><strong>Region: </strong><span class="my-region"></span></p>
-      <p><strong>Carbon Usage: </strong><span class="carbon-usage"></span></p>
-      <p><strong>Fossil Fuel Percentage: </strong><span class="fossil-fuel"></span></p>
+    <div class="results-container">
+      <!-- 각 지역의 결과가 여기에 표시됩니다 -->
+      <div id="result1" class="result-container"></div>
+      <div id="result2" class="result-container"></div>
+      <div id="result3" class="result-container"></div>
     </div>
     <button class="clear-btn">Change region</button>
   </div>
 
-  
+  <script src="main.js"></script>
 </body>
 </html>
